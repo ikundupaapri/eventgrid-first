@@ -53,5 +53,5 @@ jobs:
       with:
         app-name: 'eventgrid-first'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_99bdd0fa394e49228618e606715cb62b }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_51fcadf795334998b2d26726af8ce4d3 }}
         package: .
