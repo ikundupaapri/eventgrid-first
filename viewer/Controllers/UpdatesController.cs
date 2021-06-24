@@ -128,7 +128,7 @@ namespace viewer.Controllers
                     details.EventType,
                     details.Subject,
                     details.EventTime.ToLongTimeString(),
-                    e.topic.ToString());
+                    e.ToString());
             }
 
             return Ok();
