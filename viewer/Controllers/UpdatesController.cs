@@ -15,10 +15,11 @@ using viewer.Models;
 
 namespace viewer.Controllers
 {
-    
+   
     [Route("api/[controller]")]
     public class UpdatesController : Controller
     {
+        Logger Log = new Logger();
         #region Data Members
 
         private bool EventTypeSubcriptionValidation
@@ -138,6 +139,7 @@ namespace viewer.Controllers
 
         private async Task<IActionResult> HandleCloudEvent(string jsonContent)
         {
+          
             var details = JsonConvert.DeserializeObject<CloudEvent<dynamic>>(jsonContent);
             var eventData = JObject.Parse(jsonContent);
 
@@ -149,7 +151,7 @@ namespace viewer.Controllers
                 details.Time,
                 eventData.ToString()
             );
-
+            Log.WriteLog(" Export Scheduled Minute : " + eventData.ToString());
             return Ok();
         }
 
