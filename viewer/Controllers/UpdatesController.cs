@@ -106,7 +106,7 @@ namespace viewer.Controllers
                 gridEvent.EventType,
                 gridEvent.Subject,
                 gridEvent.EventTime.ToLongTimeString(),
-              //  jsonContent.ToString());
+                jsonContent.ToString());
 
             // Retrieve the validation code and echo back.
             var validationCode = gridEvent.Data["validationCode"];
@@ -131,7 +131,7 @@ namespace viewer.Controllers
                     details.EventType,
                     details.Subject,
                     details.EventTime.ToLongTimeString(),
-                 //   e.ToString());
+                    e.ToString());
             }
 
             return Ok();
@@ -149,7 +149,7 @@ namespace viewer.Controllers
                 details.Type,
                 details.Subject,
                 details.Time,
-              //  eventData.ToString()
+                eventData.ToString()
             );
             Log.WriteLog(" Export Scheduled Minute : " + eventData.ToString());
             return Ok();
