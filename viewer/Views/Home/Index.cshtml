@@ -61,20 +61,9 @@
             $("#grid-events").find("tr:gt(0)").remove();
             $("#grid-events").hide();
         }
-try{
-        var addEvent = function (id, eventType, subject, eventTime, data) {
-            var obj = JSON.parse(data);
-            var context = {
-                gridEventType: eventType,
-                gridEventSubject: subject,
-                gridEventId: id,
-                gridEvent: obj.id
 
-            };
-            }
-            catch(err) {}
-    finally{
-    var addEvent = function (id, eventType, subject, eventTime, data) {
+        var addEvent = function (id, eventType, subject, eventTime, data) {
+        
             var context = {
                 gridEventType: eventType,
                 gridEventSubject: subject,
@@ -82,7 +71,8 @@ try{
                 gridEvent: data
 
             };
-    }
+            
+
             var source = document.getElementById('event-template').innerHTML;
             var template = Handlebars.compile(source);
             var html = template(context);
