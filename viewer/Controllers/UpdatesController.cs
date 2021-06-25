@@ -15,6 +15,7 @@ using viewer.Models;
 
 namespace viewer.Controllers
 {
+    
     [Route("api/[controller]")]
     public class UpdatesController : Controller
     {
@@ -112,6 +113,7 @@ namespace viewer.Controllers
             {
                 validationResponse = validationCode
             });
+          
         }
 
         private async Task<IActionResult> HandleGridEvents(string jsonContent)
@@ -127,7 +129,6 @@ namespace viewer.Controllers
                     details.Id,
                     details.EventType,
                     details.Subject,
-                    details.Topic,
                     details.EventTime.ToLongTimeString(),
                     e.ToString());
             }
