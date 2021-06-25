@@ -127,6 +127,7 @@ namespace viewer.Controllers
                     details.Id,
                     details.EventType,
                     details.Subject,
+                    details.Topic,
                     details.EventTime.ToLongTimeString(),
                     e.ToString());
             }
