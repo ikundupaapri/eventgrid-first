@@ -34,8 +34,8 @@
                 <span class="glyphicon glyphicon-eye-open"></span>
             </button>
         </td>
+        <td>{{gridEventType}}</td>
         <td>{{gridEventSubject}}</td>
-        <td>{{gridEventTopic}}</td>
     </tr>
     <tr class="hiddenRow collapse" id="event-{{gridEventId}}">
         <td colspan="12">
@@ -64,19 +64,10 @@
 
         var addEvent = function (id, eventType, subject, eventTime, data) {
             var context = {
-<<<<<<< HEAD
-                 gridEventType: eventType,
-=======
-
                 gridEventType: eventType,
-                gridEventTopic: topic,
-
-                 gridEventType: eventType,
-
->>>>>>> 2e67a583e663930ab2a6509ab7d338e9df1ea889
-                 gridEventSubject: subject,
-                 gridEventId: id,
-                 gridEvent: data
+                gridEventSubject: subject,
+                gridEventId: id,
+                gridEvent: data
             };
             var source = document.getElementById('event-template').innerHTML;
             var template = Handlebars.compile(source);
