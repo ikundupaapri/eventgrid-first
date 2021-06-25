@@ -7,11 +7,11 @@
       <!-- <img src="~/images/eventgrid.png" height="47" width="90" alt="Azure Event Grid" /> -->
         <strong>Amartya Hazra</strong>
     </p>
-    <p style="float: right;">
+<!--     <p style="float: right;">
         <button class="btn btn-primary btn-xs" id="clear-events">
             <span class="glyphicon glyphicon-trash"></span>
         </button>
-    </p>
+    </p> -->
 </div>
 <div style="clear: both;"></div>
 <hr />
@@ -83,10 +83,10 @@
 
         var initialize = function () {
             $("#grid-events").hide();
-            var clearEvents = document.getElementById('clear-events');
-            clearEvents.addEventListener('click', function () {
-                clear();
-            });
+//             var clearEvents = document.getElementById('clear-events');
+//             clearEvents.addEventListener('click', function () {
+//                 clear();
+//             });
 
             hubConnection = new signalR.HubConnectionBuilder()
                 .withUrl("hubs/gridevents")
