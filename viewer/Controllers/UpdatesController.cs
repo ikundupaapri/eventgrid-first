@@ -119,9 +119,11 @@ namespace viewer.Controllers
 
         private async Task<IActionResult> HandleGridEvents(string jsonContent)
         {
+            int count;
             var events = JArray.Parse(jsonContent);
             foreach (var e in events)
             {
+                count++;
                 // Invoke a method on the clients for 
                 // an event grid notiification.                        
                 var details = JsonConvert.DeserializeObject<GridEvent<dynamic>>(e.ToString());
@@ -131,7 +133,7 @@ namespace viewer.Controllers
                     details.EventType,
                     details.Subject,
                     details.EventTime.ToLongTimeString(),
-                    e.ToString());
+                    count.ToString());
             }
 
             return Ok();
