@@ -67,7 +67,7 @@ namespace viewer.Controllers
             {
                 var jsonContent = await reader.ReadToEndAsync();
 
-                // Check the event type.
+                // Check the event type
                 // Return the validation code if it's 
                 // a subscription validation request. 
                 if (EventTypeSubcriptionValidation)
